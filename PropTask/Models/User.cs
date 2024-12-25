@@ -17,13 +17,13 @@ namespace PropTask.Models
             set {
                 do
                 {
-                    if (userName == null)
+                    if (!(String.IsNullOrEmpty(value)))
                     {
                         Console.WriteLine("Please enter a valid username: ");
                         value = Console.ReadLine().Trim();
                     }
 
-                } while (value == null || value == "");
+                } while (!(String.IsNullOrEmpty(value)));
             } 
         }
         public int Salary 
